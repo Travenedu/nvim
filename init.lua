@@ -13,10 +13,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+vim.wo.relativenumber = true
 
 -- Setup lazy.nvim
 require("vim-options")
 require("lazy").setup("plugins")
-
-
 
