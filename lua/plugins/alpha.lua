@@ -4,18 +4,18 @@ return {
     event = "VimEnter",
     enabled = true,
     config = function()
-      local dashboard_theme = require "alpha.themes.dashboard"
+      local dashboard_theme = require("alpha.themes.dashboard")
 
       -- Header Section
       local logo = [[
- ██████   █████              ███                 
-░░██████ ░░███              ░░░                  
- ░███░███ ░███  █████ █████ ████  █████████████  
- ░███░░███░███ ░░███ ░░███ ░░███ ░░███░░███░░███ 
- ░███ ░░██████  ░███  ░███  ░███  ░███ ░███ ░███ 
- ░███  ░░█████  ░░███ ███   ░███  ░███ ░███ ░███ 
+ ██████   █████              ███
+░░██████ ░░███              ░░░
+ ░███░███ ░███  █████ █████ ████  █████████████
+ ░███░░███░███ ░░███ ░░███ ░░███ ░░███░░███░░███
+ ░███ ░░██████  ░███  ░███  ░███  ░███ ░███ ░███
+ ░███  ░░█████  ░░███ ███   ░███  ░███ ░███ ░███
  █████  ░░█████  ░░█████    █████ █████░███ █████
-░░░░░    ░░░░░    ░░░░░    ░░░░░ ░░░░░ ░░░ ░░░░░ 
+░░░░░    ░░░░░    ░░░░░    ░░░░░ ░░░░░ ░░░ ░░░░░
 
                             Code by Traven Reese
   ]]
@@ -37,11 +37,11 @@ return {
         ),
         dashboard_theme.button("n", " New file", "<cmd>ene <BAR> startinsert <CR>"),
         dashboard_theme.button("<leader> qq", " Close", "<cmd>q <CR>"),
-        
+
         dashboard_theme.button(
           "<leader> cn",
           " Config",
-          "<cmd>edit $MYVIMRC <CR> <cmd>cd " .. vim.fn.stdpath "config" .. " <CR>"
+          "<cmd>edit $MYVIMRC <CR> <cmd>cd " .. vim.fn.stdpath("config") .. " <CR>"
         ),
       }
       dashboard_theme.section.buttons.opts.hl = "AlphaButtons"
@@ -81,12 +81,12 @@ return {
 
           -- Footer
           dashboard_theme.section.footer.val = "⚡ Neovim loaded "
-            .. stats.loaded
-            .. "/"
-            .. stats.count
-            .. " plugins in "
-            .. ms
-            .. "ms"
+              .. stats.loaded
+              .. "/"
+              .. stats.count
+              .. " plugins in "
+              .. ms
+              .. "ms"
           pcall(vim.cmd.AlphaRedraw)
           dashboard_theme.section.footer.opts.hl = "AlphaFooter"
         end,
@@ -94,3 +94,4 @@ return {
     end,
   },
 }
+
