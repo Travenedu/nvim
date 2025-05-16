@@ -13,8 +13,8 @@ return {
           "lua_ls",
           "clangd",
           "dockerls",
-          "docker_compose_language_service",
           "pylsp",
+          "docker_compose_language_service",
         },
       })
     end,
@@ -30,9 +30,11 @@ return {
       lspconfig.dockerls.setup({ capabilities = capabilities })
       lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
       lspconfig.pylsp.setup({ capabilities = capabilities })
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show documentation (hover)" })
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Show code actions" })
+
     end,
   },
 }
