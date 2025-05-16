@@ -43,6 +43,9 @@ return {
           " Config",
           "<cmd>edit $MYVIMRC <CR> <cmd>cd " .. vim.fn.stdpath "config" .. " <CR>"
         ),
+        dashboard_theme.button("<leader> LL", "𝓛Lazy", "<cmd>:Lazy<CR>"),
+        dashboard_theme.button("<leader> MM", "𝓜 Mason", "<cmd>:Mason<CR>"),
+
       }
       dashboard_theme.section.buttons.opts.hl = "AlphaButtons"
 
