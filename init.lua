@@ -15,9 +15,20 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup line numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+-- vim.opt.number = true
+-- vim.opt.relativenumber = true
+-- vim.opt.signcolumn = "number"
+
+-- notify when yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+    vim.notify("Yanked! 🔔")
+  end,
+  desc = "Highlight and notify after yank",
+})
+
+
 
 -- Setup lazy.nvim
 require("vim-options")
