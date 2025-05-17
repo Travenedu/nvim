@@ -41,15 +41,6 @@ return {
       { "<leader>sb",      function() Snacks.picker.grep_buffers() end,                            desc = "Grep Open Buffers" },
       { "<leader>sg",      function() Snacks.picker.grep() end,                                    desc = "Grep" },
       { "<leader>sw",      function() Snacks.picker.grep_word() end,                               desc = "Visual selection or word", mode = { "n", "x" } },
-      -- git
-      -- { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
-      -- { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" }, -- change
-      -- { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" }, -- change
-      -- { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git Log Line" }, -- change
-      -- { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" }, -- change
-      -- { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" }, -- change
-      -- { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" }, -- change
-      -- { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" }, -- change
       -- search
       { '<leader>s"',      function() Snacks.picker.registers() end,                               desc = "Registers" },
       { '<leader>s/',      function() Snacks.picker.search_history() end,                          desc = "Search History" },
