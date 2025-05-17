@@ -14,11 +14,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Setup line numbers
--- vim.opt.number = true
--- vim.opt.relativenumber = true
--- vim.opt.signcolumn = "number"
-
 -- notify when yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
