@@ -21,8 +21,6 @@ return {
   ]]
 
       dashboard_theme.section.header.val = vim.split(logo, "\n")
-      -- dashboard_theme.section.header.opts.hl = "AlphaHeaderGreen"
-      -- vim.api.nvim_set_hl(0, "AlphaHeaderGreen", { fg = "#50fa7b", bold = true })
 
       -- Buttons Section
       dashboard_theme.section.buttons.val = {
@@ -43,8 +41,8 @@ return {
           " Config",
           "<cmd>edit $MYVIMRC <CR> <cmd>cd " .. vim.fn.stdpath "config" .. " <CR>"
         ),
-        dashboard_theme.button("<leader> LL", "𝓛Lazy", "<cmd>:Lazy<CR>"),
-        dashboard_theme.button("<leader> MM", "𝓜 Mason", "<cmd>:Mason<CR>"),
+        dashboard_theme.button("<leader> CL", "𝓛Lazy", "<cmd>:Lazy<CR>"),
+        dashboard_theme.button("<leader> CM", "𝓜 Mason", "<cmd>:Mason<CR>"),
 
       }
       dashboard_theme.section.buttons.opts.hl = "AlphaButtons"
