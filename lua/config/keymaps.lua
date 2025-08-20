@@ -57,14 +57,14 @@ local wrap_with_markdown = function(content)
   vim.fn.setreg("+", result)
 end
 
-map("n", "<leader>mf", function()
+map("n", "<leader>yf", function()
   local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
   local content = table.concat(lines, "\n")
   wrap_with_markdown(content)
   vim.notify("Entire file copied with MD formatting")
 end, "Yank file with filename as heading and wrap in md fence")
 
-map("v", "<leader>ms", function()
+map("v", "<leader>ys", function()
   local v_start = vim.fn.getpos("'<")
   local v_end = vim.fn.getpos("'>")
   local lines = vim.api.nvim_buf_get_lines(0, v_start[2] - 1, v_end[2], false)
