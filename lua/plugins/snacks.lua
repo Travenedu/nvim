@@ -10,7 +10,7 @@ return {
       indent       = { enabled = true },
       input        = { enabled = true },
       lazygit      = { enabled = true },
-      notifier     = { enabled = true, timeout = 3000, },
+      notifier     = { enabled = true, timeout = 5000, },
       dim          = { enabled = true },
       picker       = { enabled = true },
       quickfile    = { enabled = true },
@@ -27,7 +27,7 @@ return {
       { "<leader><space>", function() Snacks.picker.smart() end,                                   desc = "Smart Find Files" },
       { "<leader>b",       function() Snacks.explorer() end,                                       desc = "File Explorer" },
       -- find
-      { "<leader>fb",      function() Snacks.picker.buffers() end,                                 desc = "Buffers" },
+      { "<leader>fB",      function() Snacks.picker.buffers() end,                                 desc = "Buffers" },
       { "<leader>fc",      function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
       { "<leader>ff",      function() Snacks.picker.files() end,                                   desc = "Find Files" },
       { "<leader>fp",      function() Snacks.picker.projects() end,                                desc = "Projects" },
